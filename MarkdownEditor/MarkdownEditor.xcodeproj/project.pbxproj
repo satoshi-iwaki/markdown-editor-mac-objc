@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F3A889D2052C7F500A0050E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88832052C7F400A0050E /* AppDelegate.m */; };
+		4F3A889E2052C7F500A0050E /* ContentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88852052C7F400A0050E /* ContentsManager.m */; };
+		4F3A889F2052C7F500A0050E /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88882052C7F400A0050E /* Converter.m */; };
+		4F3A88A02052C7F500A0050E /* GfmConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A888A2052C7F400A0050E /* GfmConverter.m */; };
+		4F3A88A12052C7F500A0050E /* MarkdownConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A888C2052C7F400A0050E /* MarkdownConverter.m */; };
+		4F3A88A22052C7F500A0050E /* PandocConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A888E2052C7F400A0050E /* PandocConverter.m */; };
+		4F3A88A32052C7F500A0050E /* PhpMarkdownConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88902052C7F400A0050E /* PhpMarkdownConverter.m */; };
+		4F3A88A52052C7F500A0050E /* StrictMarkdownConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88942052C7F400A0050E /* StrictMarkdownConverter.m */; };
+		4F3A88A62052C7F500A0050E /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88962052C7F400A0050E /* EditorViewController.m */; };
+		4F3A88A72052C7F500A0050E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88982052C7F400A0050E /* main.m */; };
+		4F3A88A82052C7F500A0050E /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A889A2052C7F400A0050E /* MainWindowController.m */; };
+		4F3A88A92052C7F500A0050E /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A889C2052C7F400A0050E /* PreviewViewController.m */; };
+		4F5AE299207D0F9700C72733 /* gfm-header.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F5AE298207D0F9700C72733 /* gfm-header.txt */; };
+		4F94D3F420458A3B00D85BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D3F320458A3B00D85BEA /* Assets.xcassets */; };
+		4F94D3F720458A3B00D85BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D3F520458A3B00D85BEA /* Main.storyboard */; };
+		4F94D40520458A3B00D85BEA /* MarkdownEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94D40420458A3B00D85BEA /* MarkdownEditorTests.m */; };
+		4F94D41020458A3B00D85BEA /* MarkdownEditorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94D40F20458A3B00D85BEA /* MarkdownEditorUITests.m */; };
+		4F94D4282045903100D85BEA /* pandoc in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D4272045903100D85BEA /* pandoc */; };
+		4F94D42B2046E6C300D85BEA /* gfm.css in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D42A2046E6C300D85BEA /* gfm.css */; };
+		4F94D42D2046E8A600D85BEA /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D42C2046E8A600D85BEA /* sample.md */; };
+		4F94D4312048488500D85BEA /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D4302048488500D85BEA /* markdown.css */; };
+		4F94D43520484F7300D85BEA /* markdown-header.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D43420484F7300D85BEA /* markdown-header.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F94D40120458A3B00D85BEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F94D3E220458A3B00D85BEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F94D3E920458A3B00D85BEA;
+			remoteInfo = MarkdownEditor;
+		};
+		4F94D40C20458A3B00D85BEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F94D3E220458A3B00D85BEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F94D3E920458A3B00D85BEA;
+			remoteInfo = MarkdownEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F3A88822052C7F400A0050E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F3A88832052C7F400A0050E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F3A88842052C7F400A0050E /* ContentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsManager.h; sourceTree = "<group>"; };
+		4F3A88852052C7F400A0050E /* ContentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsManager.m; sourceTree = "<group>"; };
+		4F3A88872052C7F400A0050E /* Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
+		4F3A88882052C7F400A0050E /* Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
+		4F3A88892052C7F400A0050E /* GfmConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfmConverter.h; sourceTree = "<group>"; };
+		4F3A888A2052C7F400A0050E /* GfmConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GfmConverter.m; sourceTree = "<group>"; };
+		4F3A888B2052C7F400A0050E /* MarkdownConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkdownConverter.h; sourceTree = "<group>"; };
+		4F3A888C2052C7F400A0050E /* MarkdownConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkdownConverter.m; sourceTree = "<group>"; };
+		4F3A888D2052C7F400A0050E /* PandocConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandocConverter.h; sourceTree = "<group>"; };
+		4F3A888E2052C7F400A0050E /* PandocConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandocConverter.m; sourceTree = "<group>"; };
+		4F3A888F2052C7F400A0050E /* PhpMarkdownConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhpMarkdownConverter.h; sourceTree = "<group>"; };
+		4F3A88902052C7F400A0050E /* PhpMarkdownConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhpMarkdownConverter.m; sourceTree = "<group>"; };
+		4F3A88932052C7F400A0050E /* StrictMarkdownConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrictMarkdownConverter.h; sourceTree = "<group>"; };
+		4F3A88942052C7F400A0050E /* StrictMarkdownConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrictMarkdownConverter.m; sourceTree = "<group>"; };
+		4F3A88952052C7F400A0050E /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
+		4F3A88962052C7F400A0050E /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
+		4F3A88972052C7F400A0050E /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		4F3A88982052C7F400A0050E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F3A88992052C7F400A0050E /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		4F3A889A2052C7F400A0050E /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		4F3A889B2052C7F400A0050E /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		4F3A889C2052C7F400A0050E /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		4F5AE298207D0F9700C72733 /* gfm-header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gfm-header.txt"; sourceTree = "<group>"; };
+		4F94D3EA20458A3B00D85BEA /* MarkdownEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F94D3F320458A3B00D85BEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F94D3F620458A3B00D85BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F94D3F820458A3B00D85BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F94D3FB20458A3B00D85BEA /* MarkdownEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarkdownEditor.entitlements; sourceTree = "<group>"; };
+		4F94D40020458A3B00D85BEA /* MarkdownEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F94D40420458A3B00D85BEA /* MarkdownEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkdownEditorTests.m; sourceTree = "<group>"; };
+		4F94D40620458A3B00D85BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F94D40B20458A3B00D85BEA /* MarkdownEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F94D40F20458A3B00D85BEA /* MarkdownEditorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkdownEditorUITests.m; sourceTree = "<group>"; };
+		4F94D41120458A3B00D85BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F94D4272045903100D85BEA /* pandoc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pandoc; sourceTree = "<group>"; };
+		4F94D42A2046E6C300D85BEA /* gfm.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = gfm.css; sourceTree = "<group>"; };
+		4F94D42C2046E8A600D85BEA /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = sample.md; sourceTree = "<group>"; };
+		4F94D4302048488500D85BEA /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
+		4F94D43420484F7300D85BEA /* markdown-header.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "markdown-header.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F94D3E720458A3B00D85BEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94D3FD20458A3B00D85BEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94D40820458A3B00D85BEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F3A88812052C7F400A0050E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4F3A88862052C7F400A0050E /* Converter */,
+				4F3A88822052C7F400A0050E /* AppDelegate.h */,
+				4F3A88832052C7F400A0050E /* AppDelegate.m */,
+				4F3A88842052C7F400A0050E /* ContentsManager.h */,
+				4F3A88852052C7F400A0050E /* ContentsManager.m */,
+				4F3A88952052C7F400A0050E /* EditorViewController.h */,
+				4F3A88962052C7F400A0050E /* EditorViewController.m */,
+				4F3A88972052C7F400A0050E /* Logger.h */,
+				4F3A88982052C7F400A0050E /* main.m */,
+				4F3A88992052C7F400A0050E /* MainWindowController.h */,
+				4F3A889A2052C7F400A0050E /* MainWindowController.m */,
+				4F3A889B2052C7F400A0050E /* PreviewViewController.h */,
+				4F3A889C2052C7F400A0050E /* PreviewViewController.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4F3A88862052C7F400A0050E /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				4F3A88872052C7F400A0050E /* Converter.h */,
+				4F3A88882052C7F400A0050E /* Converter.m */,
+				4F3A88892052C7F400A0050E /* GfmConverter.h */,
+				4F3A888A2052C7F400A0050E /* GfmConverter.m */,
+				4F3A888B2052C7F400A0050E /* MarkdownConverter.h */,
+				4F3A888C2052C7F400A0050E /* MarkdownConverter.m */,
+				4F3A888D2052C7F400A0050E /* PandocConverter.h */,
+				4F3A888E2052C7F400A0050E /* PandocConverter.m */,
+				4F3A888F2052C7F400A0050E /* PhpMarkdownConverter.h */,
+				4F3A88902052C7F400A0050E /* PhpMarkdownConverter.m */,
+				4F3A88932052C7F400A0050E /* StrictMarkdownConverter.h */,
+				4F3A88942052C7F400A0050E /* StrictMarkdownConverter.m */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		4F94D3E120458A3B00D85BEA = {
+			isa = PBXGroup;
+			children = (
+				4F94D3EC20458A3B00D85BEA /* MarkdownEditor */,
+				4F94D40320458A3B00D85BEA /* MarkdownEditorTests */,
+				4F94D40E20458A3B00D85BEA /* MarkdownEditorUITests */,
+				4F94D3EB20458A3B00D85BEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F94D3EB20458A3B00D85BEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F94D3EA20458A3B00D85BEA /* MarkdownEditor.app */,
+				4F94D40020458A3B00D85BEA /* MarkdownEditorTests.xctest */,
+				4F94D40B20458A3B00D85BEA /* MarkdownEditorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F94D3EC20458A3B00D85BEA /* MarkdownEditor */ = {
+			isa = PBXGroup;
+			children = (
+				4F3A88812052C7F400A0050E /* Sources */,
+				4F94D4292046E6C300D85BEA /* Resources */,
+				4F94D4262045903100D85BEA /* Binaries */,
+				4F94D3F320458A3B00D85BEA /* Assets.xcassets */,
+				4F94D3F520458A3B00D85BEA /* Main.storyboard */,
+				4F94D3F820458A3B00D85BEA /* Info.plist */,
+				4F94D3FB20458A3B00D85BEA /* MarkdownEditor.entitlements */,
+			);
+			path = MarkdownEditor;
+			sourceTree = "<group>";
+		};
+		4F94D40320458A3B00D85BEA /* MarkdownEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F94D40420458A3B00D85BEA /* MarkdownEditorTests.m */,
+				4F94D40620458A3B00D85BEA /* Info.plist */,
+			);
+			path = MarkdownEditorTests;
+			sourceTree = "<group>";
+		};
+		4F94D40E20458A3B00D85BEA /* MarkdownEditorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F94D40F20458A3B00D85BEA /* MarkdownEditorUITests.m */,
+				4F94D41120458A3B00D85BEA /* Info.plist */,
+			);
+			path = MarkdownEditorUITests;
+			sourceTree = "<group>";
+		};
+		4F94D4262045903100D85BEA /* Binaries */ = {
+			isa = PBXGroup;
+			children = (
+				4F94D4272045903100D85BEA /* pandoc */,
+			);
+			path = Binaries;
+			sourceTree = "<group>";
+		};
+		4F94D4292046E6C300D85BEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F5AE298207D0F9700C72733 /* gfm-header.txt */,
+				4F94D42A2046E6C300D85BEA /* gfm.css */,
+				4F94D43420484F7300D85BEA /* markdown-header.txt */,
+				4F94D4302048488500D85BEA /* markdown.css */,
+				4F94D42C2046E8A600D85BEA /* sample.md */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F94D3E920458A3B00D85BEA /* MarkdownEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F94D41420458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditor" */;
+			buildPhases = (
+				4F94D3E620458A3B00D85BEA /* Sources */,
+				4F94D3E720458A3B00D85BEA /* Frameworks */,
+				4F94D3E820458A3B00D85BEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarkdownEditor;
+			productName = MarkdownEditor;
+			productReference = 4F94D3EA20458A3B00D85BEA /* MarkdownEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F94D3FF20458A3B00D85BEA /* MarkdownEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F94D41720458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditorTests" */;
+			buildPhases = (
+				4F94D3FC20458A3B00D85BEA /* Sources */,
+				4F94D3FD20458A3B00D85BEA /* Frameworks */,
+				4F94D3FE20458A3B00D85BEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F94D40220458A3B00D85BEA /* PBXTargetDependency */,
+			);
+			name = MarkdownEditorTests;
+			productName = MarkdownEditorTests;
+			productReference = 4F94D40020458A3B00D85BEA /* MarkdownEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F94D40A20458A3B00D85BEA /* MarkdownEditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F94D41A20458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditorUITests" */;
+			buildPhases = (
+				4F94D40720458A3B00D85BEA /* Sources */,
+				4F94D40820458A3B00D85BEA /* Frameworks */,
+				4F94D40920458A3B00D85BEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F94D40D20458A3B00D85BEA /* PBXTargetDependency */,
+			);
+			name = MarkdownEditorUITests;
+			productName = MarkdownEditorUITests;
+			productReference = 4F94D40B20458A3B00D85BEA /* MarkdownEditorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F94D3E220458A3B00D85BEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Satoshi Iwaki";
+				TargetAttributes = {
+					4F94D3E920458A3B00D85BEA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					4F94D3FF20458A3B00D85BEA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4F94D3E920458A3B00D85BEA;
+					};
+					4F94D40A20458A3B00D85BEA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4F94D3E920458A3B00D85BEA;
+					};
+				};
+			};
+			buildConfigurationList = 4F94D3E520458A3B00D85BEA /* Build configuration list for PBXProject "MarkdownEditor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F94D3E120458A3B00D85BEA;
+			productRefGroup = 4F94D3EB20458A3B00D85BEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F94D3E920458A3B00D85BEA /* MarkdownEditor */,
+				4F94D3FF20458A3B00D85BEA /* MarkdownEditorTests */,
+				4F94D40A20458A3B00D85BEA /* MarkdownEditorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F94D3E820458A3B00D85BEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94D42B2046E6C300D85BEA /* gfm.css in Resources */,
+				4F94D3F420458A3B00D85BEA /* Assets.xcassets in Resources */,
+				4F5AE299207D0F9700C72733 /* gfm-header.txt in Resources */,
+				4F94D42D2046E8A600D85BEA /* sample.md in Resources */,
+				4F94D4282045903100D85BEA /* pandoc in Resources */,
+				4F94D3F720458A3B00D85BEA /* Main.storyboard in Resources */,
+				4F94D43520484F7300D85BEA /* markdown-header.txt in Resources */,
+				4F94D4312048488500D85BEA /* markdown.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94D3FE20458A3B00D85BEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94D40920458A3B00D85BEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F94D3E620458A3B00D85BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3A88A92052C7F500A0050E /* PreviewViewController.m in Sources */,
+				4F3A889F2052C7F500A0050E /* Converter.m in Sources */,
+				4F3A88A32052C7F500A0050E /* PhpMarkdownConverter.m in Sources */,
+				4F3A889D2052C7F500A0050E /* AppDelegate.m in Sources */,
+				4F3A88A62052C7F500A0050E /* EditorViewController.m in Sources */,
+				4F3A889E2052C7F500A0050E /* ContentsManager.m in Sources */,
+				4F3A88A82052C7F500A0050E /* MainWindowController.m in Sources */,
+				4F3A88A52052C7F500A0050E /* StrictMarkdownConverter.m in Sources */,
+				4F3A88A12052C7F500A0050E /* MarkdownConverter.m in Sources */,
+				4F3A88A02052C7F500A0050E /* GfmConverter.m in Sources */,
+				4F3A88A72052C7F500A0050E /* main.m in Sources */,
+				4F3A88A22052C7F500A0050E /* PandocConverter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94D3FC20458A3B00D85BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94D40520458A3B00D85BEA /* MarkdownEditorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94D40720458A3B00D85BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94D41020458A3B00D85BEA /* MarkdownEditorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F94D40220458A3B00D85BEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F94D3E920458A3B00D85BEA /* MarkdownEditor */;
+			targetProxy = 4F94D40120458A3B00D85BEA /* PBXContainerItemProxy */;
+		};
+		4F94D40D20458A3B00D85BEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F94D3E920458A3B00D85BEA /* MarkdownEditor */;
+			targetProxy = 4F94D40C20458A3B00D85BEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F94D3F520458A3B00D85BEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F94D3F620458A3B00D85BEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F94D41220458A3B00D85BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4F94D41320458A3B00D85BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4F94D41520458A3B00D85BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkdownEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.iwaki.MarkdownEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4F94D41620458A3B00D85BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkdownEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.iwaki.MarkdownEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4F94D41820458A3B00D85BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkdownEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.iwaki.MarkdownEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkdownEditor.app/Contents/MacOS/MarkdownEditor";
+			};
+			name = Debug;
+		};
+		4F94D41920458A3B00D85BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkdownEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.iwaki.MarkdownEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkdownEditor.app/Contents/MacOS/MarkdownEditor";
+			};
+			name = Release;
+		};
+		4F94D41B20458A3B00D85BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkdownEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.iwaki.MarkdownEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarkdownEditor;
+			};
+			name = Debug;
+		};
+		4F94D41C20458A3B00D85BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkdownEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = info.iwaki.MarkdownEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarkdownEditor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F94D3E520458A3B00D85BEA /* Build configuration list for PBXProject "MarkdownEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F94D41220458A3B00D85BEA /* Debug */,
+				4F94D41320458A3B00D85BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F94D41420458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F94D41520458A3B00D85BEA /* Debug */,
+				4F94D41620458A3B00D85BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F94D41720458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F94D41820458A3B00D85BEA /* Debug */,
+				4F94D41920458A3B00D85BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F94D41A20458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F94D41B20458A3B00D85BEA /* Debug */,
+				4F94D41C20458A3B00D85BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F94D3E220458A3B00D85BEA /* Project object */;
+}

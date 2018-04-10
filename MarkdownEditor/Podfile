@@ -1,0 +1,7 @@
+#platform :osx, '10.12'
+
+target 'MarkdownEditor' do
+  pod 'GCDWebServer'
+  pod 'AppAuth'
+
+end
