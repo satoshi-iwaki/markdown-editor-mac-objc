@@ -718,31 +718,10 @@
                                     </popUpButton>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="zLE-yQ-Nvv"/>
-                                <toolbarItem implicitItemIdentifier="18D8691C-E754-4F4B-9BAB-FEA83D5DE28C" label="" paletteLabel="" id="62G-1S-VMU">
-                                    <nil key="toolTip"/>
-                                    <size key="minSize" width="100" height="28"/>
-                                    <size key="maxSize" width="100" height="28"/>
-                                    <popUpButton key="view" verticalHuggingPriority="750" id="lGZ-Qs-C46">
-                                        <rect key="frame" x="0.0" y="14" width="100" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <popUpButtonCell key="cell" type="roundTextured" title="Item 1" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="4Fd-1L-eJf" id="dxI-ud-cqU">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
-                                            <menu key="menu" id="MLC-op-V7I">
-                                                <items>
-                                                    <menuItem title="Item 1" state="on" id="4Fd-1L-eJf"/>
-                                                    <menuItem title="Item 2" id="V5V-bw-n5Z"/>
-                                                    <menuItem title="Item 3" id="YtE-o2-QSi"/>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                    </popUpButton>
-                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="grI-lK-Y4O"/>
                                 <toolbarItem reference="zLE-yQ-Nvv"/>
-                                <toolbarItem reference="62G-1S-VMU"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
