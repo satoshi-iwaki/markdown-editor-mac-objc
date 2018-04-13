@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Converter.h"
+#import "TextConverter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PandocConverter : Converter
+@interface PandocConverter : TextConverter
 
 @property (readonly, copy) NSString *format;
 @property (nullable, readonly, copy) NSString *header;

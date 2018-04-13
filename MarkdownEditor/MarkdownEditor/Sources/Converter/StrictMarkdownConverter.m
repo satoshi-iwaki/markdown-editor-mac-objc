@@ -21,21 +21,21 @@
     return self;
 }
 
-- (NSString *)formattedStringWithString:(NSString *)string format:(ConverterFormat)format {
+- (NSString *)formattedStringWithString:(NSString *)string format:(TextConverterFormat)format {
     switch (format) {
-        case ConverterFormatBold:
+        case TextConverterFormatBold:
             return [NSString stringWithFormat:@"**%@**", string];
-        case ConverterFormatItalic:
+        case TextConverterFormatItalic:
             return [NSString stringWithFormat:@"*%@*", string];
-        case ConverterFormatStrikeThrough:
+        case TextConverterFormatStrikeThrough:
             return [NSString stringWithFormat:@"~~%@~~", string];
-        case ConverterFormatCode: {
+        case TextConverterFormatCode: {
             return [NSString stringWithFormat:@"```\n%@\n```", string];
         }
-        case ConverterFormatLink: {
+        case TextConverterFormatLink: {
             return [NSString stringWithFormat:@"[%@](url)", string];
         }
-        case ConverterFormatQuote: {
+        case TextConverterFormatQuote: {
             NSArray<NSString *> *lines = [string componentsSeparatedByString:@"\n"];
             NSMutableString *formattedString = [@"" mutableCopy];
             for (NSString *line in lines) {
@@ -45,7 +45,7 @@
             }
             return formattedString;
         }
-        case ConverterFormatListBulleted: {
+        case TextConverterFormatListBulleted: {
             NSArray<NSString *> *lines = [string componentsSeparatedByString:@"\n"];
             NSMutableString *formattedString = [@"" mutableCopy];
             for (NSString *line in lines) {
@@ -55,7 +55,7 @@
             }
             return formattedString;
         }
-        case ConverterFormatListNumbered: {
+        case TextConverterFormatListNumbered: {
             NSArray<NSString *> *lines = [string componentsSeparatedByString:@"\n"];
             NSMutableString *formattedString = [@"" mutableCopy];
             for (NSString *line in lines) {

@@ -1,14 +1,14 @@
 //
-//  Converter.m
+//  TextConverter.m
 //  MarkdownEditor
 //
 //  Created by Iwaki Satoshi on 2018/02/27.
 //  Copyright © 2018年 Satoshi Iwaki. All rights reserved.
 //
 
-#import "Converter.h"
+#import "TextConverter.h"
 
-@implementation Converter {
+@implementation TextConverter {
     NSString *_title;
 }
 
@@ -54,7 +54,7 @@
     return html;
 }
 
-- (NSString *)formattedStringWithString:(NSString *)string format:(ConverterFormat)format {
+- (NSString *)formattedStringWithString:(NSString *)string format:(TextConverterFormat)format {
     return string;
 }
 

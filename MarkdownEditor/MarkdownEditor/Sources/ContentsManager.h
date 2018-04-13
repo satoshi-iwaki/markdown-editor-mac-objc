@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Converter.h"
+#import "TextConverter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,7 +24,7 @@ FOUNDATION_EXPORT NSNotificationName ContentsManagerDidChangeContentNotification
 
 - (void)setContentWithString:(NSString *)string;
 
-- (Converter *)selectedConverter;
+- (TextConverter *)selectedConverter;
 
 @end
 

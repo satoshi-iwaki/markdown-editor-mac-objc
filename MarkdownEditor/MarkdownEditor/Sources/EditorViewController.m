@@ -8,7 +8,7 @@
 
 #import "EditorViewController.h"
 #import "ContentsManager.h"
-#import "Converter.h"
+#import "TextConverter.h"
 
 @interface EditorViewController () <NSTextViewDelegate> {
     NSString *_filePath;
@@ -62,7 +62,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatBold];
+                                                                                            format:TextConverterFormatBold];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -73,7 +73,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatStrikeThrough];
+                                                                                            format:TextConverterFormatStrikeThrough];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -84,7 +84,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatItalic];
+                                                                                            format:TextConverterFormatItalic];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -95,7 +95,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatQuote];
+                                                                                            format:TextConverterFormatQuote];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -106,7 +106,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatCode];
+                                                                                            format:TextConverterFormatCode];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -117,7 +117,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatLink];
+                                                                                            format:TextConverterFormatLink];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -128,7 +128,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatListBulleted];
+                                                                                            format:TextConverterFormatListBulleted];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -139,7 +139,7 @@
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
     NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
-                                                                                            format:ConverterFormatListNumbered];
+                                                                                            format:TextConverterFormatListNumbered];
     [self replaceCharactersInRange:range withString:string];
 }
 
@@ -254,7 +254,7 @@
     [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse result) {
         BOOL success = NO;
         if (result == NSModalResponseOK) {
-            _filePath = panel.URL.path;
+            self->_filePath = panel.URL.path;
             success = [self openFile];
         }
         handler(success);
@@ -279,7 +279,7 @@
     [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse result) {
         BOOL success = NO;
         if (result == NSModalResponseOK) {
-            _filePath = panel.URL.path;
+            self->_filePath = panel.URL.path;
             success = [self saveFile];
         }
         handler(success);

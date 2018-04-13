@@ -1,5 +1,5 @@
 //
-//  Converter.h
+//  TextConverter.h
 //  MarkdownEditor
 //
 //  Created by Iwaki Satoshi on 2018/02/27.
@@ -10,18 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, ConverterFormat) {
-    ConverterFormatBold,
-    ConverterFormatItalic,
-    ConverterFormatStrikeThrough,
-    ConverterFormatQuote,
-    ConverterFormatCode,
-    ConverterFormatLink,
-    ConverterFormatListBulleted,
-    ConverterFormatListNumbered
+typedef NS_ENUM(NSUInteger, TextConverterFormat) {
+    TextConverterFormatBold,
+    TextConverterFormatItalic,
+    TextConverterFormatStrikeThrough,
+    TextConverterFormatQuote,
+    TextConverterFormatCode,
+    TextConverterFormatLink,
+    TextConverterFormatListBulleted,
+    TextConverterFormatListNumbered
 };
 
-@interface Converter : NSObject
+@interface TextConverter : NSObject
 
 @property (readonly, copy) NSString *title;
 @property (nullable, readonly, copy) NSString *sample;
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, ConverterFormat) {
 
 - (instancetype)initWithTitle:(NSString *)title;
 
-- (NSString *)formattedStringWithString:(NSString *)string format:(ConverterFormat)format;
+- (NSString *)formattedStringWithString:(NSString *)string format:(TextConverterFormat)format;
 
 - (void)setContentWithString:(NSString *)string;
 

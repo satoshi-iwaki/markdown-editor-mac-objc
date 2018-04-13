@@ -7,11 +7,12 @@
 //
 
 #import "ContentsManager.h"
-#import "Converter.h"
+#import "TextConverter.h"
 #import "GfmConverter.h"
 #import "MarkdownConverter.h"
 #import "PhpMarkdownConverter.h"
 #import "StrictMarkdownConverter.h"
+#import "Logger.h"
 #import "GCDWebServer/GCDWebServer.h"
 #import "GCDWebServer/GCDWebServerDataResponse.h"
 
@@ -22,7 +23,7 @@ NSNotificationName ContentsManagerDidChangeContentNotification = @"ContentsManag
     NSData *_data;
     NSString *_string;
     NSUInteger _selectedConverterIndex;
-    NSArray<Converter *> *_converters;
+    NSArray<TextConverter *> *_converters;
 }
 
 + (instancetype)sharedInstance {
@@ -63,7 +64,7 @@ NSNotificationName ContentsManagerDidChangeContentNotification = @"ContentsManag
 - (NSArray<NSString *> *)converters {
     @synchronized (self) {
         NSMutableArray *converters = [@[] mutableCopy];
-        for (Converter *converter in _converters) {
+        for (TextConverter *converter in _converters) {
             [converters addObject:converter.title];
         }
         return converters;
@@ -85,7 +86,7 @@ NSNotificationName ContentsManagerDidChangeContentNotification = @"ContentsManag
     }
 }
 
-- (Converter *)selectedConverter {
+- (TextConverter *)selectedConverter {
     @synchronized (self) {
         return _converters[_selectedConverterIndex];
     }
@@ -93,10 +94,10 @@ NSNotificationName ContentsManagerDidChangeContentNotification = @"ContentsManag
 
 - (void)setContentWithString:(NSString *)string {
     @synchronized (self) {
-        Converter *converter = self.selectedConverter;
+        TextConverter *converter = self.selectedConverter;
         [converter setContentWithString:string];
-        NSLog(@"*** HTML ***");
-        NSLog(@"%@", converter.html);
+        LogV(@"*** HTML ***");
+        LogV(@"%@", converter.html);
         _string = string;
         [self didChangeContent];
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -718,24 +718,31 @@
                                     </popUpButton>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="zLE-yQ-Nvv"/>
-                                <toolbarItem implicitItemIdentifier="BF62B3EE-16C7-4AC2-AD2D-160D0F4AEBAE" label="" paletteLabel="" id="uFU-8X-EBn">
+                                <toolbarItem implicitItemIdentifier="18D8691C-E754-4F4B-9BAB-FEA83D5DE28C" label="" paletteLabel="" id="62G-1S-VMU">
                                     <nil key="toolTip"/>
-                                    <size key="minSize" width="82" height="32"/>
-                                    <size key="maxSize" width="82" height="32"/>
-                                    <button key="view" verticalHuggingPriority="750" id="2ZN-l9-lcn">
-                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                    <size key="minSize" width="100" height="28"/>
+                                    <size key="maxSize" width="100" height="28"/>
+                                    <popUpButton key="view" verticalHuggingPriority="750" id="lGZ-Qs-C46">
+                                        <rect key="frame" x="0.0" y="14" width="100" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="A7o-E1-fKj">
+                                        <popUpButtonCell key="cell" type="roundTextured" title="Item 1" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="4Fd-1L-eJf" id="dxI-ud-cqU">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="MLC-op-V7I">
+                                                <items>
+                                                    <menuItem title="Item 1" state="on" id="4Fd-1L-eJf"/>
+                                                    <menuItem title="Item 2" id="V5V-bw-n5Z"/>
+                                                    <menuItem title="Item 3" id="YtE-o2-QSi"/>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                    </popUpButton>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="grI-lK-Y4O"/>
                                 <toolbarItem reference="zLE-yQ-Nvv"/>
-                                <toolbarItem reference="uFU-8X-EBn"/>
+                                <toolbarItem reference="62G-1S-VMU"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -952,12 +959,15 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-Uf-9V0">
-                                <rect key="frame" x="226" y="278" width="180" height="18"/>
+                                <rect key="frame" x="18" y="277" width="179" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Automatically covert page" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="p1W-aW-0GJ">
+                                <buttonCell key="cell" type="check" title="Automatically reload page" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="p1W-aW-0GJ">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <binding destination="ZWO-ys-s51" name="value" keyPath="values.AutoReloadEnabled" id="1s7-Km-vjZ"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -966,19 +976,20 @@
                     </connections>
                 </viewController>
                 <customObject id="a1O-bo-B4z" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="ZWO-ys-s51"/>
             </objects>
             <point key="canvasLocation" x="750" y="1187"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ic_code_48pt" width="48" height="48"/>
-        <image name="ic_format_bold_48pt" width="48" height="48"/>
-        <image name="ic_format_italic_48pt" width="48" height="48"/>
-        <image name="ic_format_list_bulleted_48pt" width="48" height="48"/>
-        <image name="ic_format_list_numbered_48pt" width="48" height="48"/>
-        <image name="ic_format_quote_48pt" width="48" height="48"/>
-        <image name="ic_format_strikethrough_48pt" width="48" height="48"/>
-        <image name="ic_insert_link_48pt" width="48" height="48"/>
-        <image name="ic_refresh_48pt" width="48" height="48"/>
+        <image name="ic_code_48pt" width="96" height="96"/>
+        <image name="ic_format_bold_48pt" width="96" height="96"/>
+        <image name="ic_format_italic_48pt" width="96" height="96"/>
+        <image name="ic_format_list_bulleted_48pt" width="96" height="96"/>
+        <image name="ic_format_list_numbered_48pt" width="96" height="96"/>
+        <image name="ic_format_quote_48pt" width="96" height="96"/>
+        <image name="ic_format_strikethrough_48pt" width="96" height="96"/>
+        <image name="ic_insert_link_48pt" width="96" height="96"/>
+        <image name="ic_refresh_48pt" width="96" height="96"/>
     </resources>
 </document>

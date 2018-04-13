@@ -23,6 +23,14 @@ __太字__
 
 ___太字+斜体___
 
+## 絵文字
+:smile:
+:laughing:
+:blush:
+:relaxed:
+
+[Emoji cheat sheet](http://www.emoji-cheat-sheet.com/)
+
 ## リンク
 [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
 
@@ -57,27 +65,27 @@ ___太字+斜体___
 
 ## 番号なし箇条書き
 - 番号なし箇条書き1
-  - 番号なし箇条書き2
+- 番号なし箇条書き2
 
 
 * 番号なし箇条書き1
-  * 番号なし箇条書き2
+* 番号なし箇条書き2
 
 ## 番号あり箇条書き
 1. 番号あり箇条書き1
-   1. 番号あり箇条書き1-1
-   1. 番号あり箇条書き1-2
+1. 番号あり箇条書き1-1
+1. 番号あり箇条書き1-2
 1. 番号あり箇条書き2
-   1. 番号あり箇条書き2-1
-   1. 番号あり箇条書き2-2
+1. 番号あり箇条書き2-1
+1. 番号あり箇条書き2-2
 
 ## シンタックスハイライト
 
 ```javascript
 function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
+if(arg) {
+$.facebox({div:'#foo'})
+}
 }
 ```
 
