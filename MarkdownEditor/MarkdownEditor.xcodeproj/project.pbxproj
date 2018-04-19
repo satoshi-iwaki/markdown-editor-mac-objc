@@ -136,6 +136,8 @@
 				4F3A889A2052C7F400A0050E /* MainWindowController.m */,
 				4F3A889B2052C7F400A0050E /* PreviewViewController.h */,
 				4F3A889C2052C7F400A0050E /* PreviewViewController.m */,
+				4F5AE29A207E425F00C72733 /* PreferenceManager.h */,
+				4F5AE29B207E425F00C72733 /* PreferenceManager.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
