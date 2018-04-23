@@ -7,23 +7,25 @@
 //
 
 #import "MainWindowController.h"
+#import "GitHubGistsClient.h"
 
-@interface MainWindowController ()
+@interface MainWindowController () {
+}
 
 @end
 
 @implementation MainWindowController
 
 - (NSArray<NSString *> *)converters {
-    return ContentsManager.sharedInstance.converters;
+    return ConverterManager.sharedInstance.converters;
 }
 
 - (NSUInteger)selectedConverterIndex {
-    return ContentsManager.sharedInstance.selectedConverterIndex;
+    return ConverterManager.sharedInstance.selectedConverterIndex;
 }
 
 - (void)setSelectedConverterIndex:(NSUInteger)selectedFormatIndex {
-    ContentsManager.sharedInstance.selectedConverterIndex = selectedFormatIndex;
+    ConverterManager.sharedInstance.selectedConverterIndex = selectedFormatIndex;
 }
 
 - (void)windowDidLoad {
@@ -31,6 +33,10 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
+}
+
+- (IBAction)loginButtonClicked:(id)sender {
+    [GitHubGistsClient.sharedClient login];
 }
 
 @end

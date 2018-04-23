@@ -1,5 +1,5 @@
 //
-//  ContentsManager.h
+//  ConverterManager.h
 //  MarkdownEditor
 //
 //  Created by Iwaki Satoshi on 2018/02/27.
@@ -11,12 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSNotificationName ContentsManagerDidChangeContentNotification;
+FOUNDATION_EXPORT NSNotificationName ConverterManagerDidChangeContentNotification;
 
-@interface ContentsManager : NSObject
+@interface ConverterManager : NSObject
 
-@property (copy, readonly) NSString *html;
 @property (readonly) NSURL *url;
+@property (copy, readonly) NSString *html;
 @property (copy, readonly) NSArray<NSString *> *converters;
 @property NSUInteger selectedConverterIndex;
 

@@ -718,10 +718,44 @@
                                     </popUpButton>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="zLE-yQ-Nvv"/>
+                                <toolbarItem implicitItemIdentifier="5416F42E-1164-4414-997A-1A6842B21EE4" label="" paletteLabel="" image="ic_github_32pt" id="DIL-EY-KD2">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="82" height="32"/>
+                                    <size key="maxSize" width="82" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="OB9-0N-GaY">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="ic_github_32pt" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aO8-k7-az9">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="loginButtonClicked:" target="B8D-0N-5wS" id="4qP-2G-ACY"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="D378BA4F-E8D7-40A9-8BE6-6883F6FFE968" label="" paletteLabel="" id="kJK-K8-feo">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="82" height="32"/>
+                                    <size key="maxSize" width="82" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="Zak-sX-yDe">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="58r-IT-AyC">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="uploadDocument:" target="Oky-zY-oP4" id="ecG-se-hpq"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="grI-lK-Y4O"/>
                                 <toolbarItem reference="zLE-yQ-Nvv"/>
+                                <toolbarItem reference="DIL-EY-KD2"/>
+                                <toolbarItem reference="kJK-K8-feo"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -900,6 +934,7 @@
                     </view>
                     <connections>
                         <outlet property="textView" destination="OK6-y4-1mW" id="40E-4d-Slc"/>
+                        <outlet property="titleTextField" destination="1pc-y9-WOF" id="IVb-K0-Q1Q"/>
                     </connections>
                 </viewController>
                 <customObject id="bB9-gD-jzy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -968,6 +1003,7 @@
         <image name="ic_format_list_numbered_48pt" width="96" height="96"/>
         <image name="ic_format_quote_48pt" width="96" height="96"/>
         <image name="ic_format_strikethrough_48pt" width="96" height="96"/>
+        <image name="ic_github_32pt" width="64" height="64"/>
         <image name="ic_insert_link_48pt" width="96" height="96"/>
         <image name="ic_refresh_48pt" width="96" height="96"/>
     </resources>

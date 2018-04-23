@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F3A889D2052C7F500A0050E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88832052C7F400A0050E /* AppDelegate.m */; };
-		4F3A889E2052C7F500A0050E /* ContentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88852052C7F400A0050E /* ContentsManager.m */; };
+		4F3A889E2052C7F500A0050E /* ConverterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88852052C7F400A0050E /* ConverterManager.m */; };
 		4F3A889F2052C7F500A0050E /* TextConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A88882052C7F400A0050E /* TextConverter.m */; };
 		4F3A88A02052C7F500A0050E /* GfmConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A888A2052C7F400A0050E /* GfmConverter.m */; };
 		4F3A88A12052C7F500A0050E /* MarkdownConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A888C2052C7F400A0050E /* MarkdownConverter.m */; };
@@ -21,6 +21,8 @@
 		4F3A88A92052C7F500A0050E /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A889C2052C7F400A0050E /* PreviewViewController.m */; };
 		4F5AE299207D0F9700C72733 /* gfm-header.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F5AE298207D0F9700C72733 /* gfm-header.txt */; };
 		4F5AE29C207E425F00C72733 /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AE29B207E425F00C72733 /* PreferenceManager.m */; };
+		4F7B193E208CCF04009BE0ED /* GitHubGistsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B193D208CCF04009BE0ED /* GitHubGistsClient.m */; };
+		4F7B1941208CD17F009BE0ED /* GitHubGistsContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B1940208CD17F009BE0ED /* GitHubGistsContent.m */; };
 		4F94D3F420458A3B00D85BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D3F320458A3B00D85BEA /* Assets.xcassets */; };
 		4F94D3F720458A3B00D85BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F94D3F520458A3B00D85BEA /* Main.storyboard */; };
 		4F94D40520458A3B00D85BEA /* MarkdownEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94D40420458A3B00D85BEA /* MarkdownEditorTests.m */; };
@@ -52,8 +54,8 @@
 /* Begin PBXFileReference section */
 		4F3A88822052C7F400A0050E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F3A88832052C7F400A0050E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F3A88842052C7F400A0050E /* ContentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsManager.h; sourceTree = "<group>"; };
-		4F3A88852052C7F400A0050E /* ContentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsManager.m; sourceTree = "<group>"; };
+		4F3A88842052C7F400A0050E /* ConverterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterManager.h; sourceTree = "<group>"; };
+		4F3A88852052C7F400A0050E /* ConverterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterManager.m; sourceTree = "<group>"; };
 		4F3A88872052C7F400A0050E /* TextConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextConverter.h; sourceTree = "<group>"; };
 		4F3A88882052C7F400A0050E /* TextConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextConverter.m; sourceTree = "<group>"; };
 		4F3A88892052C7F400A0050E /* GfmConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfmConverter.h; sourceTree = "<group>"; };
@@ -77,6 +79,10 @@
 		4F5AE298207D0F9700C72733 /* gfm-header.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gfm-header.txt"; sourceTree = "<group>"; };
 		4F5AE29A207E425F00C72733 /* PreferenceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceManager.h; sourceTree = "<group>"; };
 		4F5AE29B207E425F00C72733 /* PreferenceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceManager.m; sourceTree = "<group>"; };
+		4F7B193C208CCF04009BE0ED /* GitHubGistsClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubGistsClient.h; sourceTree = "<group>"; };
+		4F7B193D208CCF04009BE0ED /* GitHubGistsClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubGistsClient.m; sourceTree = "<group>"; };
+		4F7B193F208CD17F009BE0ED /* GitHubGistsContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubGistsContent.h; sourceTree = "<group>"; };
+		4F7B1940208CD17F009BE0ED /* GitHubGistsContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubGistsContent.m; sourceTree = "<group>"; };
 		4F94D3EA20458A3B00D85BEA /* Markdown Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Markdown Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F94D3F320458A3B00D85BEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F94D3F620458A3B00D85BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,8 +132,6 @@
 				4F3A88862052C7F400A0050E /* Converter */,
 				4F3A88822052C7F400A0050E /* AppDelegate.h */,
 				4F3A88832052C7F400A0050E /* AppDelegate.m */,
-				4F3A88842052C7F400A0050E /* ContentsManager.h */,
-				4F3A88852052C7F400A0050E /* ContentsManager.m */,
 				4F3A88952052C7F400A0050E /* EditorViewController.h */,
 				4F3A88962052C7F400A0050E /* EditorViewController.m */,
 				4F3A88972052C7F400A0050E /* Logger.h */,
@@ -138,6 +142,10 @@
 				4F3A889C2052C7F400A0050E /* PreviewViewController.m */,
 				4F5AE29A207E425F00C72733 /* PreferenceManager.h */,
 				4F5AE29B207E425F00C72733 /* PreferenceManager.m */,
+				4F7B193C208CCF04009BE0ED /* GitHubGistsClient.h */,
+				4F7B193D208CCF04009BE0ED /* GitHubGistsClient.m */,
+				4F7B193F208CD17F009BE0ED /* GitHubGistsContent.h */,
+				4F7B1940208CD17F009BE0ED /* GitHubGistsContent.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -145,8 +153,8 @@
 		4F3A88862052C7F400A0050E /* Converter */ = {
 			isa = PBXGroup;
 			children = (
-				4F3A88872052C7F400A0050E /* TextConverter.h */,
-				4F3A88882052C7F400A0050E /* TextConverter.m */,
+				4F3A88842052C7F400A0050E /* ConverterManager.h */,
+				4F3A88852052C7F400A0050E /* ConverterManager.m */,
 				4F3A88892052C7F400A0050E /* GfmConverter.h */,
 				4F3A888A2052C7F400A0050E /* GfmConverter.m */,
 				4F3A888B2052C7F400A0050E /* MarkdownConverter.h */,
@@ -157,6 +165,8 @@
 				4F3A88902052C7F400A0050E /* PhpMarkdownConverter.m */,
 				4F3A88932052C7F400A0050E /* StrictMarkdownConverter.h */,
 				4F3A88942052C7F400A0050E /* StrictMarkdownConverter.m */,
+				4F3A88872052C7F400A0050E /* TextConverter.h */,
+				4F3A88882052C7F400A0050E /* TextConverter.m */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F94D41420458A3B00D85BEA /* Build configuration list for PBXNativeTarget "MarkdownEditor" */;
 			buildPhases = (
+				4F7B1945208E1774009BE0ED /* ShellScript */,
 				4F94D3E620458A3B00D85BEA /* Sources */,
 				4F94D3E720458A3B00D85BEA /* Frameworks */,
 				4F94D3E820458A3B00D85BEA /* Resources */,
@@ -371,6 +382,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F7B1945208E1774009BE0ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -e \"${PROJECT_DIR}/MarkdownEditor/MarkdownEditor/Binaries/pandoc\" ]; then\n  exit 0\nfi\n\n# Download and copy Pandoc library\nPANDOC_VERSION=\"2.1.3\"\nPANDOC_FILE_NAME=\"pandoc-${PANDOC_VERSION}\"\n\nrm -rf \"${PROJECT_DIR}/tmp\"\nmkdir \"${PROJECT_DIR}/tmp\"\ncd \"${PROJECT_DIR}/tmp\"\n\nwget \"https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/${PANDOC_FILE_NAME}-macOS.zip\"\nunzip \"pandoc-${PANDOC_VERSION}-macOS.zip\"\ncp \"${PANDOC_FILE_NAME}/bin/pandoc\" \"${PROJECT_DIR}/MarkdownEditor/Binaries/.\"\n\nrm -rf \"${PROJECT_DIR}/tmp\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F94D3E620458A3B00D85BEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -382,11 +409,13 @@
 				4F3A88A32052C7F500A0050E /* PhpMarkdownConverter.m in Sources */,
 				4F3A889D2052C7F500A0050E /* AppDelegate.m in Sources */,
 				4F3A88A62052C7F500A0050E /* EditorViewController.m in Sources */,
-				4F3A889E2052C7F500A0050E /* ContentsManager.m in Sources */,
+				4F3A889E2052C7F500A0050E /* ConverterManager.m in Sources */,
 				4F3A88A82052C7F500A0050E /* MainWindowController.m in Sources */,
 				4F3A88A52052C7F500A0050E /* StrictMarkdownConverter.m in Sources */,
 				4F3A88A12052C7F500A0050E /* MarkdownConverter.m in Sources */,
 				4F3A88A02052C7F500A0050E /* GfmConverter.m in Sources */,
+				4F7B1941208CD17F009BE0ED /* GitHubGistsContent.m in Sources */,
+				4F7B193E208CCF04009BE0ED /* GitHubGistsClient.m in Sources */,
 				4F3A88A72052C7F500A0050E /* main.m in Sources */,
 				4F3A88A22052C7F500A0050E /* PandocConverter.m in Sources */,
 			);

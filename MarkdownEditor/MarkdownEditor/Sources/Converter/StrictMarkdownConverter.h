@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "MarkdownConverter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface StrictMarkdownConverter : MarkdownConverter
 
 @end
+
+NS_ASSUME_NONNULL_END

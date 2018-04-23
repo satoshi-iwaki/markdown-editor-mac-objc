@@ -7,8 +7,10 @@
 //
 
 #import "EditorViewController.h"
-#import "ContentsManager.h"
+#import "ConverterManager.h"
 #import "TextConverter.h"
+#import "GitHubGistsClient.h"
+#import "GitHubGistsContent.h"
 
 @interface EditorViewController () <NSTextViewDelegate> {
     NSString *_filePath;
@@ -16,6 +18,7 @@
 }
 
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
+@property (weak) IBOutlet NSTextField *titleTextField;
 
 @end
 
@@ -26,7 +29,7 @@
     // Do view setup here.
     
     self.textView.string = [self loadSample];
-    [ContentsManager.sharedInstance setContentWithString:self.textView.string];
+    [ConverterManager.sharedInstance setContentWithString:self.textView.string];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -38,12 +41,12 @@
 #pragma mark - NSTextDelegate
 
 - (void)textDidEndEditing:(NSNotification *)notification {
-    [ContentsManager.sharedInstance setContentWithString:self.textView.string];
+    [ConverterManager.sharedInstance setContentWithString:self.textView.string];
     _dirty = YES;
 }
 
 - (void)textDidChange:(NSNotification *)notification {
-    [ContentsManager.sharedInstance setContentWithString:self.textView.string];
+    [ConverterManager.sharedInstance setContentWithString:self.textView.string];
     _dirty = YES;
 }
 
@@ -61,7 +64,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatBold];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -72,7 +75,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatStrikeThrough];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -83,7 +86,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatItalic];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -94,7 +97,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatQuote];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -105,7 +108,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatCode];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -116,7 +119,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatLink];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -127,7 +130,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatListBulleted];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -138,7 +141,7 @@
         return;
     }
     NSString *selectedString = [self.textView.string substringWithRange:range];
-    NSString *string = [ContentsManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
+    NSString *string = [ConverterManager.sharedInstance.selectedConverter formattedStringWithString:selectedString
                                                                                             format:TextConverterFormatListNumbered];
     [self replaceCharactersInRange:range withString:string];
 }
@@ -226,10 +229,50 @@
     [self showSaveFilePanel];
 }
 
+- (IBAction)uploadDocument:(id)sender {
+    GitHubGistsContent *content = [[GitHubGistsContent alloc] initWithContent:[self documentBody]
+                                                                        title:[self documentTitle]
+                                                                     fileName:[self fileName]];
+    GitHubGistsClientTask *task = [GitHubGistsClient.sharedClient uploadTaskWithConent:content
+                                                                     completionHandler:^(NSDictionary * _Nonnull response, NSError * _Nullable error)
+    {
+        if (error) {
+            [self showAlertWithTitle:@"Failed to upload." message:error.localizedDescription];
+            return;
+        }
+        [self showAlertWithTitle:@"Succeded to upload." message:@""];
+    }];
+
+    [task execute];
+}
+
 #pragma mark - Private Methods
 
 - (NSString *)loadSample {
-    return ContentsManager.sharedInstance.selectedConverter.sample;
+    return ConverterManager.sharedInstance.selectedConverter.sample;
+}
+
+- (NSString *)documentTitle {
+    NSString *title = self.titleTextField.stringValue;
+    if (!title) {
+        title = @"Unknown";
+    }
+    return title;
+}
+
+- (NSString *)documentBody {
+    NSString *body = self.textView.string;
+    if (!body) {
+        body = @"Unknown";
+    }
+    return body;
+}
+
+- (NSString *)fileName {
+    if (!_filePath) {
+        return @"Unknown.md";
+    }
+    return [_filePath lastPathComponent];
 }
 
 - (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)string {
@@ -238,6 +281,27 @@
         [self.textView didChangeText];
         _dirty = YES;
     }
+}
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    if (!NSThread.isMainThread) {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self showAlertWithTitle:title message:message];
+        });
+        return;
+    }
+    NSAlert *alert = [[NSAlert alloc] init];
+    alert.informativeText = title;
+    alert.messageText = message;
+    alert.alertStyle = NSAlertStyleWarning;
+    [alert addButtonWithTitle:@"OK"];
+    [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+        switch (returnCode) {
+            case NSAlertFirstButtonReturn:  // OK
+            default:
+                break;
+        }
+    }];
 }
 
 - (void)showOpenFilePanelWithCompletionHandler:(void (^)(BOOL result))handler {
@@ -294,7 +358,7 @@
 
 - (void)newFile {
     self.textView.string = @"New File";
-    [ContentsManager.sharedInstance setContentWithString:self.textView.string];
+    [ConverterManager.sharedInstance setContentWithString:self.textView.string];
     _filePath = nil;
     _dirty = NO;
 }
@@ -318,7 +382,7 @@
     
     _dirty = NO;
     self.textView.string = string;
-    [ContentsManager.sharedInstance setContentWithString:self.textView.string];
+    [ConverterManager.sharedInstance setContentWithString:self.textView.string];
     return YES;
 }
 

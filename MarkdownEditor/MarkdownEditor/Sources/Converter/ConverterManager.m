@@ -1,12 +1,12 @@
 //
-//  ContentsManager.m
+//  ConverterManager.m
 //  MarkdownEditor
 //
 //  Created by Iwaki Satoshi on 2018/02/27.
 //  Copyright © 2018年 Satoshi Iwaki. All rights reserved.
 //
 
-#import "ContentsManager.h"
+#import "ConverterManager.h"
 #import "TextConverter.h"
 #import "GfmConverter.h"
 #import "MarkdownConverter.h"
@@ -16,9 +16,9 @@
 #import "GCDWebServer/GCDWebServer.h"
 #import "GCDWebServer/GCDWebServerDataResponse.h"
 
-NSNotificationName ContentsManagerDidChangeContentNotification = @"ContentsManagerDidChangeContentNotification";
+NSNotificationName ConverterManagerDidChangeContentNotification = @"ConverterManagerDidChangeContentNotification";
 
-@implementation ContentsManager {
+@implementation ConverterManager {
     GCDWebServer *_webServer;
     NSData *_data;
     NSString *_string;
@@ -104,7 +104,7 @@ NSNotificationName ContentsManagerDidChangeContentNotification = @"ContentsManag
 }
 
 - (void)didChangeContent {
-    [NSNotificationCenter.defaultCenter postNotificationName:ContentsManagerDidChangeContentNotification
+    [NSNotificationCenter.defaultCenter postNotificationName:ConverterManagerDidChangeContentNotification
                                                       object:nil];
 }
 

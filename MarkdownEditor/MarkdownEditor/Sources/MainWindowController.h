@@ -7,7 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ContentsManager.h"
+#import "ConverterManager.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface MainWindowController : NSWindowController
 
@@ -15,3 +17,5 @@
 @property NSUInteger selectedConverterIndex;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,7 +8,7 @@
 
 #import <WebKit/WebKit.h>
 #import "PreviewViewController.h"
-#import "ContentsManager.h"
+#import "ConverterManager.h"
 #import "PreferenceManager.h"
 
 @interface PreviewViewController () <WKNavigationDelegate, WKUIDelegate>
@@ -27,7 +27,7 @@
     // Do view setup here.
     [NSNotificationCenter.defaultCenter addObserver:self
                                            selector:@selector(didChangeContentNotification:)
-                                               name:ContentsManagerDidChangeContentNotification
+                                               name:ConverterManagerDidChangeContentNotification
                                              object:nil];
     
     _visibleRect = NSZeroRect;
@@ -58,7 +58,7 @@
 
 - (void)relaodHtml {
     _visibleRect = self.webView.visibleRect;
-    _navigation = [self.webView loadHTMLString:ContentsManager.sharedInstance.html
+    _navigation = [self.webView loadHTMLString:ConverterManager.sharedInstance.html
                                        baseURL:NSBundle.mainBundle.resourceURL];
 }
 
