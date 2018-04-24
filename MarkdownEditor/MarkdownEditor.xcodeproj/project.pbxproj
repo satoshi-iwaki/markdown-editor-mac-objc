@@ -394,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -e \"${PROJECT_DIR}/MarkdownEditor/MarkdownEditor/Binaries/pandoc\" ]; then\n  exit 0\nfi\n\n# Download and copy Pandoc library\nPANDOC_VERSION=\"2.1.3\"\nPANDOC_FILE_NAME=\"pandoc-${PANDOC_VERSION}\"\n\nrm -rf \"${PROJECT_DIR}/tmp\"\nmkdir \"${PROJECT_DIR}/tmp\"\ncd \"${PROJECT_DIR}/tmp\"\n\nwget \"https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/${PANDOC_FILE_NAME}-macOS.zip\"\nunzip \"pandoc-${PANDOC_VERSION}-macOS.zip\"\ncp \"${PANDOC_FILE_NAME}/bin/pandoc\" \"${PROJECT_DIR}/MarkdownEditor/Binaries/.\"\n\nrm -rf \"${PROJECT_DIR}/tmp\"\n";
+			shellScript = "if [ -e \"${PROJECT_DIR}/MarkdownEditor/Binaries/pandoc\" ]; then\n  exit 0\nfi\n\n# Download and copy Pandoc library\nPANDOC_VERSION=\"2.1.3\"\nPANDOC_FILE_NAME=\"pandoc-${PANDOC_VERSION}\"\n\nrm -rf \"${PROJECT_DIR}/tmp\"\nmkdir \"${PROJECT_DIR}/tmp\"\ncd \"${PROJECT_DIR}/tmp\"\n\nwget \"https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/${PANDOC_FILE_NAME}-macOS.zip\"\nunzip \"pandoc-${PANDOC_VERSION}-macOS.zip\"\n\nmkdir -p \"${PROJECT_DIR}/MarkdownEditor/Binaries\"\ncp \"${PANDOC_FILE_NAME}/bin/pandoc\" \"${PROJECT_DIR}/MarkdownEditor/Binaries/.\"\n\nrm -rf \"${PROJECT_DIR}/tmp\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
